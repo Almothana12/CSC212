@@ -19,7 +19,16 @@ public class Tut7 {
 	
 	public static<T> boolean searchStack(Stack<T> stack, T elem) {
 		if (stack.empty())  
-			return false;    
+			return false;
+		T temp = stack.pop();
+		boolean result;  
+		if(temp.equals(elem))
+			result = true;
+		else
+			result = searchStack(stack, elem);
+		stack.push(temp);
+		return result;
+
 	}
 
 
