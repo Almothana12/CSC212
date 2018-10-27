@@ -1,7 +1,7 @@
 package enums;
 
 
-/** to be used in priority queue*/
+/** to be used in priority queue. */
 public enum Priority {
 	
 	VERY_LOW(0),
