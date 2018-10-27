@@ -1,6 +1,6 @@
 package dataStructures.List;
 
-import interfaces.List;
+
 import nodes.DoubleNode;
 
 public class DoubleLinkedList<T> {
@@ -8,11 +8,7 @@ public class DoubleLinkedList<T> {
 	private DoubleNode<T> head;
 	private DoubleNode<T> current;
 
-	/**
-	 * (non-Javadoc)
-	 * 
-	 * @see List#findFirst()
-	 */
+
 
 	public void findFirst() {
 		current = head;
@@ -49,11 +45,6 @@ public class DoubleLinkedList<T> {
 
 	}
 
-	/**
-	 * (non-Javadoc)
-	 * 
-	 * @see List#remove()
-	 */
 
 	public void remove() {
 		if (head == current) {
@@ -72,11 +63,7 @@ public class DoubleLinkedList<T> {
 		}
 	}
 
-	/**
-	 * (non-Javadoc)
-	 * 
-	 * @see List#full()
-	 */
+
 
 	public boolean full() {
 		return false;
@@ -85,9 +72,22 @@ public class DoubleLinkedList<T> {
 	public boolean empty() {
 		return head == null;
 	}
+	
+	public boolean first(){
+		return current == head;
+	}
 
 	public boolean last() {
 		return current.next == null;
+	}
+	
+	public void display() {
+		DoubleNode<T> temp = head;
+		while(temp!= null) {
+			System.out.print(temp.data);
+			temp = temp.next;
+		}
+		System.out.println();
 	}
 
 }
