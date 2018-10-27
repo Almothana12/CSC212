@@ -8,4 +8,5 @@ public interface Stack<T> {
 	boolean empty();
 	boolean full();
 
+	void display();
 }

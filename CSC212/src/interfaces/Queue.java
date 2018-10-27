@@ -6,4 +6,6 @@ public interface Queue<T> {
 	
 	int length();
 	boolean full();
+	
+	void display();
 }
