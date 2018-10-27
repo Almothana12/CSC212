@@ -10,17 +10,17 @@ import interfaces.List;
  */
 public class ArrayList<T> implements List<T> {
 	
-	/** The max size. */
-	public int maxSize;
+	/** The max size of the list. */
+	private int maxSize;
 	
-	/** The size. */
-	public int size;
+	/** The actual number of element in the list. */
+	private int size;
 	
 	/** The current. */
-	public int current;
+	private int current;
 	
 	/** The nodes. */
-	public T[] nodes;
+	private T[] nodes;
 	
 	 /**
  	 * Instantiates a new array list.
