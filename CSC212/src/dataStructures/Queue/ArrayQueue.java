@@ -1,6 +1,8 @@
 package dataStructures.Queue;
 
-public class ArrayQueue<T> {
+import interfaces.Queue;
+
+public class ArrayQueue<T> implements Queue<T>{
 	private int maxSize;
 	private int size;
 	private int head, tail;
@@ -14,14 +16,14 @@ public class ArrayQueue<T> {
 		nodes =(T[]) new Object[n];
 	}
 
-	
+	@Override
 	public void enqueue(T e) {
 		nodes[tail] = e;
 		tail = (tail+1) % maxSize;
 		size++;
 	}
 	
-	
+	@Override
 	public T serve() {
 		T temp = nodes[head];
 		head = ++head % maxSize;
@@ -29,38 +31,18 @@ public class ArrayQueue<T> {
 		return temp;
 	}
 
-	
+	@Override
 	public int length() {
 		return size;
 	}
 
-	
+	@Override
 	public boolean full() {
 		return size == maxSize;
 	}
 
 	
-	public int multiEnqueue(T[] els, int k) {
-		int l=0;
-	
-		for(int i=0; i<k && !full() ; i++) {
-				enqueue(els[i]);
-				l++;
-		}
-		return l;
-	}
-
-	
-	public int multiServe(T[] els, int k) {
-		int l=0;
-		
-		for(int i=0; i<k && (length()!=0); i++) {
-				els[i] = serve();
-				l++;
-		}
-		return l;
-	}
-	
+	@Override
 	public void display() {
 		for(int i=0; i<size; i++) {
 			System.out.print(nodes[i]);
