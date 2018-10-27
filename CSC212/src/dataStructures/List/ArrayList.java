@@ -111,5 +111,11 @@ public class ArrayList<T> implements List<T> {
 		return current == size-1;
 	}
 	
+	public void diplay() {
+		for(int i=0; i<size; i++)
+			System.out.println(nodes[i]);
+		System.out.println();
+	}
+	
 
 }
