@@ -11,6 +11,16 @@ public class Tut7 {
 	public static<T> void copyStack(Stack<T> srcStack, Stack<T> destStack) {
 		if(srcStack.empty())
 			return;
-		
+		T elem= srcStack.pop();
+		copyStack(srcStack, destStack);
+		srcStack.push(elem);
+		destStack.push(elem);	
 	}
+	
+	public static<T> boolean searchStack(Stack<T> stack, T elem) {
+		if (stack.empty())  
+			return false;    
+	}
+
+
 }
