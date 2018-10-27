@@ -1,2 +1,2 @@
-### CSC212
+## CSC212
 All things CSC212
