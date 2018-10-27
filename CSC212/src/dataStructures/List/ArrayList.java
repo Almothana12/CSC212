@@ -2,7 +2,6 @@ package dataStructures.List;
 
 import interfaces.List;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class ArrayList.
  *
