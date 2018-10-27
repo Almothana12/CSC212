@@ -35,6 +35,13 @@ public class ArrayStack<T> implements Stack<T> {
 	public boolean full() {
 		return top == maxsize-1;
 	}
+	
+	public void display() {
+		for(int i=0; i<=top; i++) 
+			System.out.print(nodes[i]);
+		System.out.println();
+		
+	}
 
 
 

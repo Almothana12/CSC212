@@ -32,28 +32,28 @@ public class ArrayList<T> implements List<T> {
 		 nodes = (T[]) new Object[n];
 	 }
 	 
-	/* (non-Javadoc)
+	/**
 	 * @see List#findFirst()
 	 */
 	public void findFirst() {
 		current = 0;
 	}
 
-	/* (non-Javadoc)
+	/**
 	 * @see List#findNext()
 	 */
 	public void findNext() {
 		current++;
 	}
 
-	/* (non-Javadoc)
+	/**
 	 * @see List#retrieve()
 	 */
 	public T retrieve() {
 		return nodes[current];
 	}
 
-	/* (non-Javadoc)
+	/**
 	 * @see List#update(java.lang.Object)
 	 */
 	public void update(T e) {
@@ -61,7 +61,7 @@ public class ArrayList<T> implements List<T> {
 		
 	}
 
-	/* (non-Javadoc)
+	/**
 	 * @see List#insert(java.lang.Object)
 	 */
 	
@@ -74,7 +74,7 @@ public class ArrayList<T> implements List<T> {
 	}
 	 
 
-	/* (non-Javadoc)
+	/**
 	 * @see List#remove()
 	 */
 	public void remove() {
@@ -90,25 +90,25 @@ public class ArrayList<T> implements List<T> {
 	
 	}
 
-	/* (non-Javadoc)
+	/** 
 	 * @see List#full()
 	 */
 	public boolean full() {
 		return size == maxSize;
 	}
 
-	/* (non-Javadoc)
+	/** 
 	 * @see List#empty()
 	 */
 	public boolean empty() {
 		return size == 0;
 	}
 
-	/* (non-Javadoc)
+	/** 
 	 * @see List#last()
 	 */
 	public boolean last() {
-		return current == size;
+		return current == size-1;
 	}
 	
 
