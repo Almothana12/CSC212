@@ -42,5 +42,14 @@ public class LinkedQueue<T> implements Queue<T> {
 		return false;
 	}
 	
+	public void display() {
+		Node<T> temp = head;
+		while(temp!=null) {
+			System.out.print(temp);
+			temp = temp.next;
+		}
+		System.out.println();
+	}
+	
 
 }
