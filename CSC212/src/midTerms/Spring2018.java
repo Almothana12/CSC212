@@ -10,19 +10,22 @@ public class Spring2018 {
 	public static void main(String[] args) {
 		
 		// testing swapAdj:
-		Queue<Character> q = new ArrayQueue<Character>(5);
-		Character a[] = {'A','B','C','D','E'};
-		for(int i=0; i<5; i++)
+		Character a[] = {'A', 'a', 'B', 'b', 'C', 'c', 'D'};
+		Queue<Character> q = new ArrayQueue<Character>(a.length);
+		for(int i=0; i<a.length; i++)
 			q.enqueue(a[i]);
 
+		q.display();
 		swapAdj(q);
-//		q.display();
+		q.display();
 		
 		
 		//testing replace:
+		Character b[] = {'A', 'B', 'C', 'D', 'E'};
 		Stack<Character> st = new LinkedStack<>();
-		for(int i=0; i<5; i++)
-			st.push(a[i]);
+		for(int i=0; i<b.length; i++)
+			st.push(b[i]);
+		
 		
 		Stack<Character> temp = replace(st, 'A', 'b');
 //		temp.display();
