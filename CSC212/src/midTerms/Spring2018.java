@@ -27,6 +27,8 @@ public class Spring2018 {
 		Stack<Character> st = new LinkedStack<>();
 		for(int i=0; i<b.length; i++)
 			st.push(b[i]);
+
+
 		
 		Stack<Character> temp = replace(st, 'A', 'b');
 //		temp.display();
