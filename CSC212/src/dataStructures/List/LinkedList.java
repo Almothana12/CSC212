@@ -1,5 +1,6 @@
 package dataStructures.List;
 
+import interfaces.List;
 import nodes.Node;
 
 // TODO: Auto-generated Javadoc
@@ -10,7 +11,7 @@ import nodes.Node;
  *
  * @param <T> the generic type
  */
-public class LinkedList<T> {
+public class LinkedList<T> implements List<T> {
 	
 	/** The head. */
 	private Node<T> head;
@@ -25,55 +26,55 @@ public class LinkedList<T> {
 		head = current = null;
 	}
 	
-	/* (non-Javadoc)
+	/**
 	 * @see List#empty()
 	 */
-	
+	@Override
 	public boolean empty() {
 		return head == null;
 	}
 	
-	/* (non-Javadoc)
+	/**
 	 * @see List#last()
 	 */
-	
+	@Override
 	public boolean last() {
 		return current.next == null;
 	}
 	
-	/* (non-Javadoc)
+	/**
 	 * @see List#full()
 	 */
-	
+	@Override
 	public boolean full() {
 		return false;
 	}
 	
-	/* (non-Javadoc)
+	/**
 	 * @see List#update(java.lang.Object)
 	 */
-	
+	@Override
 	public void update(T e) {
 		current.data = e;	
 		}
 	
-	/* (non-Javadoc)
+	/**
 	 * @see List#findFirst()
 	 */
-	
+	@Override
 	public void findFirst() {
 		current = head;
 	}
 	
-	/* (non-Javadoc)
+	/**
 	 * @see List#findNext()
 	 */
-	
+	@Override
 	public void findNext() {
 		current = current.next;
 	}
 	
-	/* (non-Javadoc)
+	/**
 	 * @see List#retrieve()
 	 */
 	
@@ -81,10 +82,10 @@ public class LinkedList<T> {
 		return current.data;
 	}
 	
-	/* (non-Javadoc)
+	/**
 	 * @see List#remove()
 	 */
-	
+	@Override
 	public void remove() {
 		Node<T> temp = head;
 
@@ -102,10 +103,10 @@ public class LinkedList<T> {
 			current = head;
 	}
 
-	/* (non-Javadoc)
+	/* *
 	 * @see List#insert(java.lang.Object)
 	 */
-	
+	@Override
 	public void insert(T e) {
 		Node<T> theNewNode = new Node<T>(e);
 		Node<T> temp = current.next;
