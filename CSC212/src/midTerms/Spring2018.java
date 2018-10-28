@@ -15,8 +15,10 @@ public class Spring2018 {
 		for(int i=0; i<a.length; i++)
 			q.enqueue(a[i]);
 
+		System.out.print("Before swapping: ");
 		q.display();
 		swapAdj(q);
+		System.out.print("After  swapping: ");
 		q.display();
 		
 		
