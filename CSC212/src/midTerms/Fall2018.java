@@ -83,20 +83,17 @@ public class Fall2018<T> {
 	}
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
-// (wrong) doesn't work when list is full, but works fine otherwise:	
-///////////////////////////////////////////////////////////////////////////////////
-//	in class ArrayList.java	:      												 //
-//	                                                                             //
-//	public void moveToEnd(int k) {                                               //
-//		                                                                         //
-//		for(int i=0; i<k; i++) {                                                 //
-//			nodes[size] = nodes[current];                                        //
-//			for(int j=current; j<size; j++)                                      //
-//				nodes[j] = nodes[j+1];                                           //
-//		}                                                                        //
-//		current = size - k;                                                      //
-//	}                                                                            //
-///////////////////////////////////////////////////////////////////////////////////			
+// (wrong) doesn't work when list is full, but works fine otherwise:
+	
+//	public void moveToEnd(int k) {                                               
+//		                                                                         
+//		for(int i=0; i<k; i++) {                                                 
+//			nodes[size] = nodes[current];                                        
+//			for(int j=current; j<size; j++)                                      
+//				nodes[j] = nodes[j+1];                                          
+//		}                                                                        
+//		current = size - k;                                                      
+//	} 	  
 	
 	
 
