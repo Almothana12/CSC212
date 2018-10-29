@@ -128,5 +128,5 @@ public class ArrayList<T> implements List<T> {
 	current = size - k;
 }
 	
-
+	
 }
