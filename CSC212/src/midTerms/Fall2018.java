@@ -24,9 +24,11 @@ public class Fall2018<T> {
 		for(int i=0; i<b.length; i++)
 			q2.enqueue(b[i]);
 		
+		System.out.println(isOrdered(q1)); // should print "true"
+		System.out.println(isOrdered(q2)); // should print "false"
 		System.out.println(isOrdered2(q1)); // should print "true"
-		System.out.println(isOrdered2(q2)); // should print "false"
-	
+		System.out.println(isOrdered2(q2)); // should print "false
+		System.out.println();
 		
 		// Testing moveToEnd:
 		Character c[] = {'A', 'B', 'C', 'D', 'E', 'F'};
@@ -41,7 +43,7 @@ public class Fall2018<T> {
 		l.diplay();// should print: A D E F B C
 
 	}
-	
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	public static boolean isOrdered(Queue<Integer> q) {
 		
 		boolean ordered = true;
@@ -79,19 +81,26 @@ public class Fall2018<T> {
 	
 		return ordered;
 	}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	
-//	public void moveToEnd(int k) {
-//		
-//		for(int i=0; i<k; i++) {
-//			nodes[size] = nodes[current];
-//			for(int j=current; j<size; j++)
-//				nodes[j] = nodes[j+1];
-//		}
-//		current = size - k;
-//	}
-			
+///////////////////////////////////////////////////////////////////////////////////
+//	in class ArrayList.java	:      												 //
+//	                                                                             //
+//	public void moveToEnd(int k) {                                               //
+//		                                                                         //
+//		for(int i=0; i<k; i++) {                                                 //
+//			nodes[size] = nodes[current];                                        //
+//			for(int j=current; j<size; j++)                                      //
+//				nodes[j] = nodes[j+1];                                           //
+//		}                                                                        //
+//		current = size - k;                                                      //
+//	}                                                                            //
+///////////////////////////////////////////////////////////////////////////////////			
 	
+	
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	// l1={A B C D E}, l2={R S Q}, concatenate(l1, l2, 0) = {A S Q}, concatenate(l1, l2, 2) = {A B C idk i don't remember :( 
 	public static List<Character> concatenate(List<Character> l1, List<Character> l2, int i){
