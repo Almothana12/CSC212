@@ -113,9 +113,20 @@ public class ArrayList<T> implements List<T> {
 	
 	public void diplay() {
 		for(int i=0; i<size; i++)
-			System.out.println(nodes[i]);
+			System.out.print(nodes[i]);
 		System.out.println();
 	}
+	
+	/** for mid-term exam Fall2018*/
+	public void moveToEnd(int k) {
+	
+	for(int i=0; i<k; i++) {
+		nodes[size] = nodes[current];
+		for(int j=current; j<size; j++)
+			nodes[j] = nodes[j+1];
+	}
+	current = size - k;
+}
 	
 
 }
