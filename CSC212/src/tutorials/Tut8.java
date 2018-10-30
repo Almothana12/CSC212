@@ -1,6 +1,6 @@
 package tutorials;
 
-import dataStructures.trees.BinaryTree;
+import dataStructures.trees.BT;
 
 public class Tut8{
   
@@ -30,7 +30,7 @@ public class Tut8{
 	//PROBLEM 3 :
 
 	/* swaps the data of the left most node with the right most node. */
-	public static <T> void swapMost(BinaryTree<T> bTree) {
+	public static <T> void swapMost(BT<T> bTree) {
 
 	}
 
