@@ -6,8 +6,8 @@ import nodes.BTNode;
 
 public class BT<T> {
 	
-	BTNode<T> root;
-	BTNode<T> current;
+	private BTNode<T> root;
+	private BTNode<T> current;
 	
 	public boolean empty() {
 		return root==null;
