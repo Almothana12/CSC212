@@ -131,6 +131,11 @@ class PA3Test {
 		assertEquals(2, nbSol);
 	}
 	
+	@Test
+	void testPruneBranch() {
+		// TODO
+	}
+	
 	
 
 }
