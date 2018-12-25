@@ -1,48 +1,47 @@
 package dataStructures.trees;
 
-import nodes.AVLNode;
 
-public class AVL<T> {
 
-	private AVLNode<T> root;
-	private AVLNode<T> current;
+enum Balance {
+	mTWO(-2), mONE(-1), ZERO(0), pONE(1), pTWO(2);
 	
-	public boolean empty() {
-		return root == null;
+	int value;
+	
+	private Balance(int value) {
+		this.value = value;
 	}
 	
-	public boolean full() {
-		return false;
+	int combareTo(Balance b1, Balance b2) {
+		return b1.value - b2.value;
 	}
 	
-	public T retrieve() {
-		return current.data;
+}
+
+class Node<T> {
+	public int key;
+	public T data;
+	public Balance bal;
+	public Node<T> left, right;
+	 
+	public Node(int key, T data) {
+		this.key = key;
+		this.data = data;
+		bal = Balance.ZERO;
+		left = right = null;
 	}
-	
-	public boolean find(int key) {
-		AVLNode<T> p = root;
-		AVLNode<T> q = root; // the parent of p
-		
-		if(empty())
-			return false;
-		
-		while(p!=null) {
-			q = p;
-			if(p.key == key) {
-				current = p;
-				return true;
-			}
-			if(key < p.key)
-				p = p.left;
-			else
-				p = p.right;
-		}
-		
-		current = q;
-		return false;
-	}
+}
+
+
+public class AVL<T extends Comparable<T>> extends BST<T> {
+
+	private Node<T> root;
+	private Node<T> current;
 	
 	public boolean insert(int key, T data) {
+		if(super.insert(key, data)) {
+			rebalance(root);
+			return true;
+		}
 		return false;
 	}
 	
@@ -51,8 +50,67 @@ public class AVL<T> {
 		return false;
 	}
 	
+	public Node<T> rebalance(Node<T> n) {
+		
+		int heightDifference = getHeightDifference(n);
+		
+		if (heightDifference > 1) {
+			// Left subtree is taller by more than 1
+			// addition was in left tree
+			if (getHeightDifference(n.left) > 0)
+				// addition was in left subtree of left child
+				n = rotateRight(n);
+			else
+				//addition was is left subtree of right child
+				n = rotateLeftRight(n);
+		}
+		else if (heightDifference < -1) {
+			if (getHeightDifference(n.right) < 0)
+				// addition was in right subtree of right child
+				n = rotateLeft(n);
+			else
+				// addition was in left subtree of right child
+				n = rotateRightLeft(n);
+		}
+		//else n is balanced
+		
+		return n;
+	}
+	private Node<T> rotateRightLeft(Node<T> n) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	private Node<T> rotateLeftRight(Node<T> n) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	private Node<T> rotateRight(Node<T> n) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	private Node<T> rotateLeft(Node<T> n) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private int getHeightDifference(Node<T> n) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	
 	
 	
 }
+
+
+
 
 
