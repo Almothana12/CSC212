@@ -4,7 +4,7 @@
  * The second method, "printPaths", takes a node and prints all the paths from the root to the leafs.
  */
 
-package dataStructures.trees;
+package dataStructures.Trees;
 
 import java.util.ArrayList;
 import java.util.Collections;

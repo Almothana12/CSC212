@@ -1,4 +1,4 @@
-package dataStructures.trees;
+package dataStructures.Trees;
 
 import dataStructures.Stack.LinkedStack;
 import enums.Relative;
@@ -79,7 +79,7 @@ public class BT<T> {
 		
 	}
 	
-	// Non-recursive version of findparent – uses pre-order traversal
+	// Non-recursive version of findparent ï¿½ uses pre-order traversal
 	private BTNode<T> findparent(BTNode<T> currnet, BTNode<T> root) {
 		
 		if(root == null) // if tree is empty;
